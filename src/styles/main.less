@@ -1,0 +1,131 @@
+@import "map.less";
+@breakpointMobile: ~ "(max-width: 767px)";
+@breakpointTablet: ~ "(min-width: 768px) and (max-width: 1023px)";
+
+.marginBottom {
+    margin-bottom: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-transform: lowercase;
+}
+
+body {
+    background-color: @colors[backgroundColor];
+    color: @colors[textColor];
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 760px;
+    margin: auto;
+
+    @media @breakpointTablet {
+
+        .menu {
+            display: block;
+        }
+    }
+
+    @media @breakpointMobile {
+
+        .menu {
+            display: block;
+        }
+    }
+
+}
+
+header {
+    display: flex;
+
+
+    .container-header {
+        display: flex;
+        padding: 2rem;
+        margin: 0 auto;
+        align-items: center;
+
+        &-branding {
+            padding: 2rem;
+            margin-right: 1rem;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+
+            a {
+
+                text-decoration: none;
+                color: @colors[textColor];
+                background-color: @colors[buttonColor];
+                border-radius: 30px;
+                padding: .5rem 1rem;
+                margin-left: 1rem;
+                transition: all ease .3s;
+
+                &:hover {
+                    transform: translate(10px);
+                    box-shadow: 0 2rem 3rem rgba(#000, .5);
+                    font-weight: 900;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+.container-products {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    h2 {
+        text-align: center;
+        padding: 2rem;
+        font-weight: bold;
+    }
+
+    &-list {
+        text-align: center;
+        list-style: none;
+
+        &-item {
+            padding: 2rem;
+
+            h4 {
+                padding: 1rem;
+            }
+
+            p {
+                padding-bottom: 1rem;
+            }
+
+            &-button {
+
+                text-decoration: none;
+                color: @colors[textColor];
+                background-color: @colors[buttonColor];
+                border-radius: 30px;
+                padding: .5rem 1rem;
+
+                transition: all ease .3s;
+
+                &:hover {
+                    transform: translate(10px);
+                    box-shadow: 0 2rem 3rem rgba(#000, .5);
+                    font-weight: 900;
+                }
+            }
+        }
+
+    }
+}
